@@ -1,0 +1,13 @@
+numpy>=2.0
+pandas>=2.2
+scipy>=1.12
+statsmodels>=0.14
+scikit-learn>=1.4
+matplotlib>=3.8
+torch>=2.3
+gymnasium>=1.0
+stable-baselines3>=2.5
+yfinance>=0.2
+requests>=2.31
+truststore>=0.10
+pyarrow>=17

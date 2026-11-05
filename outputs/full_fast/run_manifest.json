@@ -1,0 +1,50 @@
+{
+  "profile": "full",
+  "fast": true,
+  "source": "csv",
+  "price_csv": "data/public_nse_adjusted_2012_2025.csv",
+  "price_sha256": "27597d03f0fd6dd9e80bad1cf4bf20772aba2e81579bf0c0e44e096f8366bfe4",
+  "stocks": 57,
+  "rows": 3453,
+  "first_date": "2012-01-02",
+  "last_date": "2025-12-31",
+  "formation_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "train_years": [
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "validation_years": [
+    2021,
+    2022,
+    2023
+  ],
+  "test_years": [
+    2024,
+    2025
+  ],
+  "pairs_per_year": 50,
+  "fdr_q": 0.1,
+  "cost_bps": 20.0,
+  "annual_short_carry_bps": 0.0,
+  "max_stock_gross_weight": 0.05,
+  "ppo_seeds": [
+    0
+  ],
+  "ppo_training_steps": 12000,
+  "lstm_epochs": 3
+}

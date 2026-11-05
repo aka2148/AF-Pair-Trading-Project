@@ -1,0 +1,8 @@
+Strategy,Val_Sharpe,Test_Sharpe,Test_CI_lo,Test_CI_hi,Test_AnnRet,Test_AnnVol,Test_MaxDD,Test_turnover_per_yr,Test_entries,Seed_Sharpe_mean,Seed_Sharpe_std
+Z-score (all pairs),-0.8179,-0.4259,-1.6357,0.7899,-0.0119,0.0272,-0.0658,11.794,473,,
+Z-score (clustered),-0.0846,-0.0789,-1.4483,1.284,-0.0022,0.0241,-0.0432,11.0417,452,,
+LSTM-only rule,-3.0361,-1.9916,-3.2045,-0.7825,-0.0534,0.0274,-0.1074,37.8185,2628,,
+PPO z-only (single seed),-1.3936,-1.7971,-3.1074,-0.5146,-0.0339,0.0191,-0.0688,13.9679,751,-1.7971,
+PPO + LSTM (single seed),0.3647,-0.3601,-1.8643,1.1759,-0.0068,0.0186,-0.035,5.2543,249,-0.3601,
+PPO + Markov (single seed),-1.6414,-2.0155,-3.2872,-0.7674,-0.0368,0.0185,-0.0753,18.3286,817,-2.0155,
+PPO + LSTM + Markov (single seed),0.488,0.2824,-1.0815,1.6324,0.0086,0.0321,-0.0432,5.3684,111,0.2824,

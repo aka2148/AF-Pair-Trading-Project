@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+# Market price data is generated locally; see data/README.md for provenance.
+data/*
+!data/README.md
+
+# This run used a CSV with unverified provenance.
+outputs/compact_fast/
+
+# Local run logs and the separate report reference document.
+run_*.log
+prepare_public_dataset.log
+NSE_Pairs_Trading_Methodology_Results_Reference.docx

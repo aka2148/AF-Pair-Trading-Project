@@ -1,0 +1,3 @@
+method,pairs,median_p_oos,still_coint_5pct
+all,600,0.387,0.087
+clustered,600,0.373,0.11
