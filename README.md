@@ -33,13 +33,7 @@ flowchart TD
     K --> L[Metrics, daily returns, chart and PPO checkpoint]
 ```
 
-## Method summary
 
-1. **Universe and annual formation.** The full profile uses 57 present-day NSE tickers with adjusted daily closes from 2012-01-02 through 2025-12-31. For each trading year, pair formation uses only the previous two years of observations.
-2. **Pair screening.** The baseline checks all pairs. The clustered screen standardizes returns, applies PCA and K-means, and tests within-cluster pairs. The Engle-Granger test is evaluated in both stock orientations; the smaller p-value is corrected across that year's candidates using Benjamini-Hochberg FDR. The statistical screen also requires an estimated half-life of 3–60 trading days and hedge-ratio magnitude above 0.1. Pair overlap is capped at four pairs per stock. The annual target is 50 pairs; when fewer pass all filters, eligible fills are marked **exploratory**.
-3. **Spread signals and trading rules.** A 126-trading-day rolling regression estimates the hedge ratio and spread z-score. Entry/exit rules are tuned on 2019-2020 only. Positions are set using information through close *t* and evaluated on the return to close *t+1*. The backtest charges 20 basis points per unit of combined two-leg turnover and applies a 5% per-stock gross-exposure cap.
-4. **Forecast and policy variants.** An LSTM uses 20-day sequences to forecast normalized five-day spread return. A five-state Markov model estimates five-day state probabilities from past pair-years. PPO chooses target spread exposure from `{-1, -0.5, 0, 0.5, 1}`. The comparison also includes all-pairs and clustered z-score rules, an LSTM-only rule, and PPO feature variants.
-5. **Chronological evaluation.** The full profile trains on 2017-2020, selects models using 2021-2023 validation, and evaluates on the untouched 2024-2025 test period. The included `full_fast` run uses one PPO seed, 12,000 PPO steps, and three LSTM epochs. The configured full run uses three seeds, 150,000 PPO steps, and 15 LSTM epochs.
 
 ## Dataset and provenance
 
