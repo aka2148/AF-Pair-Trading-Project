@@ -1,10 +1,10 @@
 # Dataset notes
 
-This directory contains the dataset preparation recipe but not the market-price files. Generated CSVs and manifests are kept local and ignored by Git.
+This directory contains the 57-stock adjusted-close dataset, its provenance manifest, and the full upstream license notice. The separate 12-stock CSV used for an exploratory compact experiment is not included because its original source could not be verified.
 
 ## Reproducible input
 
-Run `python prepare_public_dataset.py` from the repository root. The script fetches the individual NSE parquet files from the pinned upstream commit and builds:
+The included file is `public_nse_adjusted_2012_2025.csv`. To reproduce it, run `python prepare_public_dataset.py` from the repository root. The script fetches the individual NSE parquet files from the pinned upstream commit and builds:
 
 ```text
 data/public_nse_adjusted_2012_2025.csv
@@ -19,9 +19,9 @@ The generated dataset in the saved full-profile run has 3,453 trading-date rows 
 - Pinned source commit: [`bbe90ca7fb2a3d1ceb47ccaa158e12e81b9cfb40`](https://github.com/aswinv90/indian-market-historical-data/tree/bbe90ca7fb2a3d1ceb47ccaa158e12e81b9cfb40)
 - Terms: [upstream license at the pinned commit](https://github.com/aswinv90/indian-market-historical-data/blob/bbe90ca7fb2a3d1ceb47ccaa158e12e81b9cfb40/LICENSE)
 
-The upstream project describes its dataset terms as non-commercial research and personal use and restricts redistribution. This repository therefore publishes the acquisition script and schema notes, not the downloaded CSV or source parquet files. Check the upstream terms directly and request permission from the data owner if your planned use requires rights not granted there.
+The license text supplied with this dataset is included in [`LICENSE-upstream.txt`](LICENSE-upstream.txt). It grants copying and use for personal, non-commercial, and educational research. It prohibits commercial use, including redistribution as part of a commercial offering, unless the copyright holder gives prior explicit written permission. The copyright notice, permission notice, and disclaimer must accompany copies or substantial portions. Keep this notice with the CSV when copying or downloading it for research use.
 
-The original 12-stock CSV used for a compact experiment is not included either: its source could not be verified. To run the compact profile, provide a CSV for which you have appropriate rights and document its provenance.
+The original 12-stock CSV used for a compact experiment is not included: its source could not be verified. To run the compact profile, provide a CSV for which you have appropriate rights and document its provenance.
 
 ## Use a different CSV
 

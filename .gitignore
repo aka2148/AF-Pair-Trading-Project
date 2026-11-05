@@ -2,9 +2,12 @@
 __pycache__/
 *.py[cod]
 
-# Market price data is generated locally; see data/README.md for provenance.
+# Keep the licensed pinned snapshot; ignore other local/source data files.
 data/*
 !data/README.md
+!data/LICENSE-upstream.txt
+!data/public_nse_adjusted_2012_2025.csv
+!data/public_nse_adjusted_2012_2025.manifest.json
 
 # This run used a CSV with unverified provenance.
 outputs/compact_fast/

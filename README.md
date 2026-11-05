@@ -12,7 +12,7 @@ An academic research project for screening Indian equities for candidate pairs, 
 | `pairs_trading_final_model.ipynb` | Notebook version for interactive/Kaggle use. |
 | `sync_notebook.py` | Regenerates the notebook cells from the pipeline while preserving its initial notebook setup cell. |
 | `prepare_public_dataset.py` | Downloads the pinned upstream files and builds the local adjusted-close CSV. |
-| `data/README.md` | Dataset schema, provenance, local setup, and redistribution note. |
+| `data/README.md` | Dataset schema, provenance, license, and local setup. |
 | `outputs/full_fast/` | Saved full-profile fast-run metrics, test return series, chart, manifests, and selected PPO model. |
 | `outputs/README.md` | Guide to generated output files and the saved model artifact. |
 
@@ -43,9 +43,9 @@ flowchart TD
 
 ## Dataset and provenance
 
-The source repository describes its terms as non-commercial research/personal use and restricts redistribution. Therefore, this repository **does not include the adjusted-price CSV files**. It includes a pinned download-and-format recipe instead. Read [`data/README.md`](data/README.md) and the [upstream license at the pinned commit](https://github.com/aswinv90/indian-market-historical-data/blob/bbe90ca7fb2a3d1ceb47ccaa158e12e81b9cfb40/LICENSE) before using the source data.
+The 57-stock adjusted-price CSV and its provenance manifest are included under the upstream license in [`data/LICENSE-upstream.txt`](data/LICENSE-upstream.txt). That license permits personal, non-commercial, and educational research use and requires the copyright, permission, and disclaimer notices to accompany copies. Commercial use or redistribution as part of a commercial offering requires explicit written permission. Read [`data/README.md`](data/README.md) and the [license at the pinned upstream commit](https://github.com/aswinv90/indian-market-historical-data/blob/bbe90ca7fb2a3d1ceb47ccaa158e12e81b9cfb40/LICENSE) before using the data.
 
-To create the local 57-stock CSV, run `prepare_public_dataset.py` after installing the requirements. The generated files are ignored by Git. The separate 12-stock CSV used for an exploratory compact run is also excluded because its original data source could not be verified.
+The included CSV was assembled from the pinned upstream commit. To reproduce the CSV and manifest locally, run `prepare_public_dataset.py` after installing the requirements. The separate 12-stock CSV used for an exploratory compact run is excluded because its original data source could not be verified.
 
 The fixed universe contains stocks selected from present-day names rather than historical constituent snapshots. This creates survivorship bias. The pipeline accepts point-in-time membership data using `MEMBERSHIP_CSV`, but no such snapshots are included.
 
